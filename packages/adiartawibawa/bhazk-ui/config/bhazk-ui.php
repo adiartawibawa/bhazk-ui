@@ -73,7 +73,14 @@ return [
             'label' => 'Navigation',
             'components' => [
                 'breadcrumbs',
-                'menu'
+                'menu',
+                'link',
+                'navbar',
+                'tab',
+                'pagination',
+                'step',
+                'dock',
+                'megamenu',
             ],
         ],
         'input' => [

@@ -38,6 +38,12 @@ Route::prefix(config('bhazk-ui.docs.route_prefix', 'docs'))
         // --- Navigations ---
         Route::view('navigation/breadcrumbs', 'bhazk-ui::docs.navigation.breadcrumbs')->name('navigation.breadcrumbs');
         Route::view('navigation/menu', 'bhazk-ui::docs.navigation.menu')->name('navigation.menu');
-
+        Route::view('navigation/link', 'bhazk-ui::docs.navigation.link')->name('navigation.link');
+        Route::view('navigation/navbar', 'bhazk-ui::docs.navigation.navbar')->name('navigation.navbar');
+        Route::view('navigation/tab', 'bhazk-ui::docs.navigation.tab')->name('navigation.tab');
+        Route::view('navigation/pagination', 'bhazk-ui::docs.navigation.pagination')->name('navigation.pagination');
+        Route::view('navigation/step', 'bhazk-ui::docs.navigation.step')->name('navigation.step');
+        Route::view('navigation/dock', 'bhazk-ui::docs.navigation.dock')->name('navigation.dock');
+        Route::view('navigation/megamenu', 'bhazk-ui::docs.navigation.megamenu')->name('navigation.megamenu');
 
     });
