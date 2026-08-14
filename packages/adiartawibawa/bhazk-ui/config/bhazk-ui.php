@@ -71,7 +71,10 @@ return [
         ],
         'navigation' => [
             'label' => 'Navigation',
-            'components' => [],
+            'components' => [
+                'breadcrumbs',
+                'menu'
+            ],
         ],
         'input' => [
             'label' => 'Input',

@@ -14,7 +14,7 @@ Route::prefix(config('bhazk-ui.docs.route_prefix', 'docs'))
         Route::view('actions/swap', 'bhazk-ui::docs.actions.swap')->name('actions.swap');
         Route::view('actions/fab', 'bhazk-ui::docs.actions.fab')->name('actions.fab');
 
-        // ------ Data Display -------
+        // --- Data Display ---
         Route::view('data-display/badge', 'bhazk-ui::docs.data-display.badge')->name('data-display.badge');
         Route::view('data-display/avatar', 'bhazk-ui::docs.data-display.avatar')->name('data-display.avatar');
         Route::view('data-display/card', 'bhazk-ui::docs.data-display.card')->name('data-display.card');
@@ -34,4 +34,10 @@ Route::prefix(config('bhazk-ui.docs.route_prefix', 'docs'))
         Route::view('data-display/hover-3d', 'bhazk-ui::docs.data-display.hover-3d')->name('data-display.hover-3d');
         Route::view('data-display/hover-gallery', 'bhazk-ui::docs.data-display.hover-gallery')->name('data-display.hover-gallery');
         Route::view('data-display/text-rotate', 'bhazk-ui::docs.data-display.text-rotate')->name('data-display.text-rotate');
+
+        // --- Navigations ---
+        Route::view('navigation/breadcrumbs', 'bhazk-ui::docs.navigation.breadcrumbs')->name('navigation.breadcrumbs');
+        Route::view('navigation/menu', 'bhazk-ui::docs.navigation.menu')->name('navigation.menu');
+
+
     });
