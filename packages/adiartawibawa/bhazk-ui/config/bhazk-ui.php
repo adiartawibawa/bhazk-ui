@@ -85,7 +85,21 @@ return [
         ],
         'input' => [
             'label' => 'Input',
-            'components' => [],
+            'components' => [
+                'input-field',
+                'textarea',
+                'select',
+                'checkbox',
+                'toggle',
+                'radio',
+                'range',
+                'rating',
+                'fieldset',
+                'calendar',
+                'filter',
+                'otp',
+                'validator',
+            ],
         ],
         'feedback' => [
             'label' => 'Feedback',

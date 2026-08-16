@@ -46,4 +46,18 @@ Route::prefix(config('bhazk-ui.docs.route_prefix', 'docs'))
         Route::view('navigation/dock', 'bhazk-ui::docs.navigation.dock')->name('navigation.dock');
         Route::view('navigation/megamenu', 'bhazk-ui::docs.navigation.megamenu')->name('navigation.megamenu');
 
+        // --- Inputs ---
+        Route::view('input/input-field', 'bhazk-ui::docs.input.input-field')->name('input.input-field');
+        Route::view('input/textarea', 'bhazk-ui::docs.input.textarea')->name('input.textarea');
+        Route::view('input/select', 'bhazk-ui::docs.input.select')->name('input.select');
+        Route::view('input/checkbox', 'bhazk-ui::docs.input.checkbox')->name('input.checkbox');
+        Route::view('input/toggle', 'bhazk-ui::docs.input.toggle')->name('input.toggle');
+        Route::view('input/radio', 'bhazk-ui::docs.input.radio')->name('input.radio');
+        Route::view('input/range', 'bhazk-ui::docs.input.range')->name('input.range');
+        Route::view('input/rating', 'bhazk-ui::docs.input.rating')->name('input.rating');
+        Route::view('input/fieldset', 'bhazk-ui::docs.input.fieldset')->name('input.fieldset');
+        Route::view('input/calendar', 'bhazk-ui::docs.input.calendar')->name('input.calendar');
+        Route::view('input/filter', 'bhazk-ui::docs.input.filter')->name('input.filter');
+        Route::view('input/otp', 'bhazk-ui::docs.input.otp')->name('input.otp');
+        Route::view('input/validator', 'bhazk-ui::docs.input.validator')->name('input.validator');
     });
