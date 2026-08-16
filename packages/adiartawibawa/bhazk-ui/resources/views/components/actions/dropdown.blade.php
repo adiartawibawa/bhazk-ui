@@ -48,21 +48,13 @@
     dalam satu halaman tanpa saling bentrok.
 --}}
 <div x-data="{ open: {{ $open ? 'true' : 'false' }} }" x-on:click.outside="open = false" x-on:keydown.escape.window="open = false"
-    {{ $attributes->class([
-        'dropdown',
-        $placementClass,
-        $alignClass,
-        'dropdown-hover' => $hover,
-        'dropdown-open' => $open,
-    ]) }}>
+    {{ $attributes->class(['dropdown', $placementClass, $alignClass, 'dropdown-hover' => $hover]) }}
+    :class="{ 'dropdown-open': open }">
     <div tabindex="0" role="button" x-on:click="open = !open">
         {{ $trigger }}
     </div>
 
-    <ul x-show="open" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0"
-        x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-100"
-        x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-on:click="open = false"
-        tabindex="0"
+    <ul tabindex="0" x-on:click="open = false"
         class="dropdown-content menu z-50 bg-base-100 rounded-box p-2 shadow-sm {{ $spacingClass }} {{ $contentClass }}">
         {{ $slot }}
     </ul>
