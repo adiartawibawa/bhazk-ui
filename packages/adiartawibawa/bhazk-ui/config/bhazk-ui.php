@@ -99,6 +99,7 @@ return [
                 'filter',
                 'otp',
                 'validator',
+                'file-input',
             ],
         ],
         'feedback' => [

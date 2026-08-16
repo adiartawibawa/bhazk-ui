@@ -60,4 +60,5 @@ Route::prefix(config('bhazk-ui.docs.route_prefix', 'docs'))
         Route::view('input/filter', 'bhazk-ui::docs.input.filter')->name('input.filter');
         Route::view('input/otp', 'bhazk-ui::docs.input.otp')->name('input.otp');
         Route::view('input/validator', 'bhazk-ui::docs.input.validator')->name('input.validator');
+        Route::view('input/file-input', 'bhazk-ui::docs.input.file-input')->name('input.file-input');
     });
