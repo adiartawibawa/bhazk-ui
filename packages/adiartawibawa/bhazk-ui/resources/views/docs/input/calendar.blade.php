@@ -3,44 +3,49 @@
         <span class="badge badge-primary badge-outline mb-2">Input</span>
         <h1 class="text-3xl font-bold">Calendar</h1>
         <p class="text-base-content/70 mt-2">
-            Kalender/date picker berbasis web component
-            <a href="https://wicky.nillia.ms/cally/" target="_blank" class="link link-primary">Cally</a>.
-            DaisyUI hanya menyediakan styling, bukan komponen kalender mandiri.
+            Kalender & date picker murni Alpine + DaisyUI — tanpa library
+            eksternal apa pun. DaisyUI sendiri tidak menyediakan komponen
+            kalender mandiri (hanya styling untuk library pihak ketiga seperti
+            Cally), sehingga logic navigasi bulan dan pemilihan tanggal
+            sepenuhnya ditulis manual di sini, mengikuti prinsip yang sama
+            seperti komponen Countdown.
         </p>
-    </div>
-
-    <div role="alert" class="alert alert-warning mb-10 text-sm">
-        <span>
-            Komponen ini butuh package <code>cally</code> ter-install
-            (<code>npm install cally</code>) dan ter-import di
-            <code>resources/js/app.js</code>. Tanpa itu, kalender tampil kosong
-            tanpa fungsi karena custom element belum terdaftar di browser.
-        </span>
     </div>
 
     <section class="mb-12">
         <h2 class="text-xl font-semibold mb-3">Live Preview — Inline</h2>
         <div class="border border-base-300 rounded-box p-8 bg-base-100 flex justify-center">
-            <x-input.calendar />
+            <x-input.calendar name="tanggal_lahir" value="YYYY/MM/DD" />
         </div>
     </section>
 
     <section class="mb-12">
-        <h2 class="text-xl font-semibold mb-3">Date Picker (Popover)</h2>
-        <div class="border border-base-300 rounded-box p-8 bg-base-100">
-            <x-input.date-picker id="dp-demo" placeholder="Klik untuk pilih tanggal" />
+        <h2 class="text-xl font-semibold mb-3">Date Picker (Dropdown)</h2>
+        <div class="border border-base-300 rounded-box p-8 bg-base-100 flex flex-col items-center gap-6">
+            <x-input.date-picker name="tgl_acara" placeholder="Pilih tanggal acara" />
+            <x-actions.button variant="primary" size="sm">Konfirmasi</x-actions.button>
         </div>
         <p class="text-sm text-base-content/60 mt-3">
-            Menggabungkan teknik Popover API + CSS Anchor Positioning yang
-            sama seperti komponen Megamenu.
+            Klik tombol untuk membuka kalender, pilih tanggal untuk otomatis
+            menutup panel dan memperbarui teks tombol.
         </p>
     </section>
 
     <section>
         <h2 class="text-xl font-semibold mb-3">Cara Pakai</h2>
         <div class="mockup-code">
-            <pre data-prefix="1"><code>&lt;x-input.date-picker id="tgl-lahir" placeholder="Pilih tanggal lahir" /&gt;</code></pre>
+            <pre data-prefix="1"><code>&lt;x-input.date-picker name="tgl_lahir" placeholder="Pilih tanggal lahir" /&gt;</code></pre>
         </div>
+
+        <div role="alert" class="alert alert-info mt-4 text-sm">
+            <span>
+                Isi input <code>hidden</code> dengan format <code>YYYY-MM-DD</code>
+                otomatis tersedia lewat prop <code>name</code> — cocok untuk
+                submit form native (<code>$request-&gt;input('tgl_lahir')</code>)
+                maupun dibaca lewat JS eksternal jika diperlukan.
+            </span>
+        </div>
+
         <div class="overflow-x-auto mt-6">
             <table class="table">
                 <thead>
@@ -52,18 +57,22 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td rowspan="3"><code>&lt;x-input.calendar&gt;</code></td>
+                        <td rowspan="2"><code>&lt;x-input.calendar&gt;</code></td>
                         <td><code>value</code></td>
-                        <td>Tanggal terisi (YYYY-MM-DD)</td>
+                        <td>Tanggal awal terpilih (YYYY-MM-DD)</td>
                     </tr>
                     <tr>
-                        <td><code>min</code> / <code>max</code></td>
-                        <td>Batas tanggal yang bisa dipilih</td>
+                        <td><code>name</code></td>
+                        <td>Opsional — nama hidden input untuk submit form</td>
                     </tr>
                     <tr>
                         <td rowspan="3"><code>&lt;x-input.date-picker&gt;</code></td>
-                        <td><code>id</code></td>
-                        <td>Wajib, unik</td>
+                        <td><code>value</code></td>
+                        <td>Tanggal awal terpilih</td>
+                    </tr>
+                    <tr>
+                        <td><code>name</code></td>
+                        <td>Nama hidden input</td>
                     </tr>
                     <tr>
                         <td><code>placeholder</code></td>
