@@ -71,4 +71,6 @@ Route::prefix(config('bhazk-ui.docs.route_prefix', 'docs'))
         Route::view('feedback/toast', 'bhazk-ui::docs.feedback.toast')->name('feedback.toast');
         Route::view('feedback/tooltip', 'bhazk-ui::docs.feedback.tooltip')->name('feedback.tooltip');
 
+        // --- Layouts ---
+        Route::view('layout/divider', 'bhazk-ui::docs.layout.divider')->name('layout.divider');
     });

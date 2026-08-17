@@ -116,7 +116,9 @@ return [
         ],
         'layout' => [
             'label' => 'Layout',
-            'components' => [],
+            'components' => [
+                'divider',
+            ],
         ],
         'mockups' => [
             'label' => 'Mockups',
