@@ -1,0 +1,15 @@
+{
+    "name": "@adiartawibawa/bhazk-ui-assets",
+    "private": true,
+    "version": "1.0.0",
+    "scripts": {
+        "build": "esbuild resources/js/bhazk-ui.js --bundle --minify --format=iife --outfile=dist/bhazk-ui.js"
+    },
+    "devDependencies": {
+        "esbuild": "^0.24.0",
+        "filepond": "^4.32.7",
+        "filepond-plugin-image-preview": "^4.6.12",
+        "filepond-plugin-file-validate-size": "^2.2.8",
+        "filepond-plugin-file-validate-type": "^1.2.9"
+    }
+}

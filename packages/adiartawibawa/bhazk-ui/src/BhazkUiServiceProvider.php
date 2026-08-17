@@ -53,5 +53,10 @@ class BhazkUiServiceProvider extends ServiceProvider
         $this->publishes([
             $viewsPath.'/docs' => resource_path('views/vendor/bhazk-ui/docs'),
         ], 'bhazk-ui-docs');
+
+        // Publish dist JS/CSS terkompilasi ke public/, siap dipakai
+        $this->publishes([
+            __DIR__.'/../dist' => public_path('vendor/bhazk-ui'),
+        ], 'bhazk-ui-assets');
     }
 }

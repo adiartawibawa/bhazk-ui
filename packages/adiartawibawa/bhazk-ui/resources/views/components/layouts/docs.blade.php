@@ -8,7 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhazk UI — Component Docs</title>
 
+    <x-layouts.bhazk-ui-scripts />
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
     @livewireStyles
 </head>
 
