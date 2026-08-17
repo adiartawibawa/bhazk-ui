@@ -104,7 +104,15 @@ return [
         ],
         'feedback' => [
             'label' => 'Feedback',
-            'components' => [],
+            'components' => [
+                'alert',
+                'loading',
+                'progress',
+                'radial-progress',
+                'skeleton',
+                'toast',
+                'tooltip',
+            ],
         ],
         'layout' => [
             'label' => 'Layout',

@@ -61,4 +61,14 @@ Route::prefix(config('bhazk-ui.docs.route_prefix', 'docs'))
         Route::view('input/otp', 'bhazk-ui::docs.input.otp')->name('input.otp');
         Route::view('input/validator', 'bhazk-ui::docs.input.validator')->name('input.validator');
         Route::view('input/file-input', 'bhazk-ui::docs.input.file-input')->name('input.file-input');
+
+        // --- Feedbacks ---
+        Route::view('feedback/alert', 'bhazk-ui::docs.feedback.alert')->name('feedback.alert');
+        Route::view('feedback/loading', 'bhazk-ui::docs.feedback.loading')->name('feedback.loading');
+        Route::view('feedback/progress', 'bhazk-ui::docs.feedback.progress')->name('feedback.progress');
+        Route::view('feedback/radial-progress', 'bhazk-ui::docs.feedback.radial-progress')->name('feedback.radial-progress');
+        Route::view('feedback/skeleton', 'bhazk-ui::docs.feedback.skeleton')->name('feedback.skeleton');
+        Route::view('feedback/toast', 'bhazk-ui::docs.feedback.toast')->name('feedback.toast');
+        Route::view('feedback/tooltip', 'bhazk-ui::docs.feedback.tooltip')->name('feedback.tooltip');
+
     });
