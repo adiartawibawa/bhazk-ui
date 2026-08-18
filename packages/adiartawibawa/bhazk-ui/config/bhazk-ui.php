@@ -129,7 +129,12 @@ return [
         ],
         'mockups' => [
             'label' => 'Mockups',
-            'components' => [],
+            'components' => [
+                'browser',
+                'code',
+                'phone',
+                'window',
+            ],
         ],
     ],
 
