@@ -118,6 +118,13 @@ return [
             'label' => 'Layout',
             'components' => [
                 'divider',
+                'drawer',
+                'footer',
+                'hero',
+                'indicator',
+                'join',
+                'mask',
+                'stack',
             ],
         ],
         'mockups' => [

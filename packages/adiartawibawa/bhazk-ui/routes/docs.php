@@ -73,4 +73,12 @@ Route::prefix(config('bhazk-ui.docs.route_prefix', 'docs'))
 
         // --- Layouts ---
         Route::view('layout/divider', 'bhazk-ui::docs.layout.divider')->name('layout.divider');
+        Route::view('layout/drawer', 'bhazk-ui::docs.layout.drawer')->name('layout.drawer');
+        Route::view('layout/footer', 'bhazk-ui::docs.layout.footer')->name('layout.footer');
+        Route::view('layout/hero', 'bhazk-ui::docs.layout.hero')->name('layout.hero');
+        Route::view('layout/indicator', 'bhazk-ui::docs.layout.indicator')->name('layout.indicator');
+        Route::view('layout/join', 'bhazk-ui::docs.layout.join')->name('layout.join');
+        Route::view('layout/mask', 'bhazk-ui::docs.layout.mask')->name('layout.mask');
+        Route::view('layout/stack', 'bhazk-ui::docs.layout.stack')->name('layout.stack');
+
     });
