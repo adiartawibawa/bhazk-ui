@@ -87,3 +87,8 @@ Route::prefix(config('bhazk-ui.docs.route_prefix', 'docs'))
         Route::view('mockups/phone', 'bhazk-ui::docs.mockups.phone')->name('mockups.phone');
         Route::view('mockups/window', 'bhazk-ui::docs.mockups.window')->name('mockups.window');
     });
+
+Route::view('layout/drawer/embed/basic', 'bhazk-ui::docs.layout.drawer-embeds.basic')->name('layout.drawer.embed.basic');
+Route::view('layout/drawer/embed/responsive', 'bhazk-ui::docs.layout.drawer-embeds.responsive')->name('layout.drawer.embed.responsive');
+Route::view('layout/drawer/embed/end', 'bhazk-ui::docs.layout.drawer-embeds.end')->name('layout.drawer.embed.end');
+Route::view('layout/drawer/embed/navbar', 'bhazk-ui::docs.layout.drawer-embeds.navbar')->name('layout.drawer.embed.navbar');
