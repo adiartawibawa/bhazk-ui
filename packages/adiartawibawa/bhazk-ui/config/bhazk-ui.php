@@ -27,6 +27,14 @@ return [
         'variant' => 'primary',
     ],
 
+    'icons' => [
+        'default' => 'lucide', // set yang dipakai jika prop 'name' tanpa prefix "set:"
+        'sets' => [
+            // Consumer mengisi folder ini
+            'lucide' => resource_path('svg/lucide'),
+        ],
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Kategori Komponen
@@ -134,6 +142,12 @@ return [
                 'code',
                 'phone',
                 'window',
+            ],
+        ],
+        'utilities' => [
+            'label' => 'Utilities',
+            'components' => [
+                'icon',
             ],
         ],
     ],

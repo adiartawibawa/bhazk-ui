@@ -86,6 +86,9 @@ Route::prefix(config('bhazk-ui.docs.route_prefix', 'docs'))
         Route::view('mockups/code', 'bhazk-ui::docs.mockups.code')->name('mockups.code');
         Route::view('mockups/phone', 'bhazk-ui::docs.mockups.phone')->name('mockups.phone');
         Route::view('mockups/window', 'bhazk-ui::docs.mockups.window')->name('mockups.window');
+
+        // --- Utilities ---
+        Route::view('utilities/icon', 'bhazk-ui::docs.utilities.icon')->name('utilities.icon');
     });
 
 Route::view('layout/drawer/embed/basic', 'bhazk-ui::docs.layout.drawer-embeds.basic')->name('layout.drawer.embed.basic');
