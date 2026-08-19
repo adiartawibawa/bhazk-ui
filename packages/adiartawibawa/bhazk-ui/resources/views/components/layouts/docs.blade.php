@@ -40,6 +40,19 @@
                     <p class="text-xs text-base-content/60">Modular UI Component Library with DaisyUI</p>
                 </div>
 
+                <div class="mb-4">
+
+                    <a href="{{ route('introduction') }}" @class([
+                        'flex items-center gap-2 px-3 py-2 rounded-lg font-semibold text-sm',
+                        'bg-primary/10 text-primary' => request()->routeIs('docs.introduction'),
+                        'text-base-content/70 hover:bg-base-200' => !request()->routeIs(
+                            'docs.introduction'),
+                    ])>
+                        <x-icon set="lucide" name="zap" class="w-4 h-4" />
+                        Introduction
+                    </a>
+                </div>
+
                 <ul class="menu">
                     @foreach (config('bhazk-ui.categories', []) as $slug => $category)
                         <li>

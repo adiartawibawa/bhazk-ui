@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+// Route::view('/', 'bhazk-ui::docs.introduction')->name('docs.introduction');
+Route::view('introduction', 'bhazk-ui::docs.introduction')->name('introduction');
+
 Route::prefix(config('bhazk-ui.docs.route_prefix', 'docs'))
     ->middleware(config('bhazk-ui.docs.middleware', ['web']))
     ->name('docs.')
