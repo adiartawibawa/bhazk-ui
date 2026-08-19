@@ -34,6 +34,10 @@ class BhazkUiServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->registerPublishing($viewsPath);
         }
+
+        // Set icon bawaan package — selalu tersedia, terpisah dari icon set
+        // milik consumer supaya tidak pernah bentrok nama.
+        config(['bhazk-ui.icons.sets.bhazk-ui-demo' => __DIR__.'/../resources/svg/demo']);
     }
 
     protected function registerPublishing(string $viewsPath): void
@@ -58,9 +62,5 @@ class BhazkUiServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../dist' => public_path('vendor/bhazk-ui'),
         ], 'bhazk-ui-assets');
-
-        // Set icon bawaan package — selalu tersedia, terpisah dari icon set
-        // milik consumer supaya tidak pernah bentrok nama.
-        config(['bhazk-ui.icons.sets.bhazk-ui-demo' => __DIR__.'/../resources/svg/demo']);
     }
 }

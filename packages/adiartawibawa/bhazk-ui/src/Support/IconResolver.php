@@ -27,7 +27,7 @@ class IconResolver
 
         // Sanitasi wajib — cegah path traversal (mis. name="../../.env")
         $safeName = basename($name);
-        $path = rtrim($directory, '/').'/'.$safeName.'.svg';
+        $path = rtrim($directory, '/\\').DIRECTORY_SEPARATOR.$safeName.'.svg';
 
         if (! is_file($path)) {
             return static::$memoryCache[$cacheKey] = null;
